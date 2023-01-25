@@ -1,0 +1,209 @@
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: #2e2e2e;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #84a5a8;
+  border-radius: 10px;
+  border: 1rem  #0b0b0b solid transparent;
+  background-clip:content-box;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: rgb(30, 166, 250);
+}
+
+.active_nav {
+  
+    
+  background: linear-gradient(
+    to right,
+    rgb(249, 123, 239),
+    rgb(250, 142, 106 )
+  );
+  
+  box-shadow: 0 0 .5rem rgba(252, 249, 249, 0.6);
+  
+}
+
+
+.back{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.hfive {
+        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: "Roboto", monospace;
+    letter-spacing: 5px;
+    cursor: pointer;
+    position: relative;
+    background-image: url("/images/image1.jpg");
+    object-fit: contain;
+    height: 300px;
+  }
+  
+  .one{
+  font-size: 60px;
+    letter-spacing: 8px;
+    color: #fff;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    animation: shine 8s linear 0.75ms  forwards;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+    
+   
+    
+    @media (max-width:951px){
+      .one{
+        font-size: 5vh;
+      }
+
+    } 
+     
+    
+    @media (max-width:1050px){
+      .one{
+        font-size: 3vh;
+        
+      }
+
+    } 
+     
+    .wrapper{
+      display: flex;
+    }
+    .wrapper .static-txt{
+      color: #fff;
+      font-size: 3vw;
+      font-weight: 400;
+      opacity: 0;
+      transform: translate(-2rem);
+      animation: slidein 1s ease 9s forwards;
+    }
+    @keyframes slidein{
+     to{
+      transform: translateX(0);
+        opacity: 1;
+      }
+      
+    }
+    .wrapper .dynamic-txts{
+      margin-left: 15px;
+      height: 90px;
+      line-height: 90px;
+      overflow: hidden;
+    }
+    .dynamic-txts li{
+      list-style: none;
+      color: #FC6D6D;
+      font-size: 5vw;
+      font-weight: 500;
+      position: relative;
+      top: 0;
+      animation: slide 8s steps(4) 9s infinite;
+    }
+    @keyframes slide {
+      100%{
+        top: -370px;
+      }
+    }
+    .dynamic-txts li .text-scroll{
+      position: relative;
+      margin: 5px 0;
+      line-height: 90px;
+      opacity: 0;
+     
+      animation: appear 2s  10s forwards;
+    }
+    .dynamic-txts li .text-scroll::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      
+    }
+    @keyframes appear{
+      to{
+        opacity: 1;
+        
+      }
+    }
+
+    .font{
+      font-size: 35px;
+      font-weight: 600;
+    }
+   
+    
+    
+
+    @keyframes shine {
+    0% {
+      background-position: -400%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+  .effects{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    
+    font-weight: bold;
+    transform: translateX(-3rem);
+    opacity: 0;
+    animation: fadeup 1s ease-in-out 7s forwards ;
+  }
+
+
+  @keyframes fadeup {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+ 
+  .nav-link:hover{
+    border-bottom: 3px solid black;
+    color:rgb(0, 0, 18);
+    padding-bottom: 0px;
+    margin-bottom: 2px;
+  }
+  
+
+
+
+  .item {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    padding-top: 75px;
+    background: rgba(255,85,0, .7);
+    text-align: center;
+    color: #4E4C48;
+    font-size: 1.5em;
+  }
+
+  .up :hover{
+      transform: scale(2.5);
+  }
+
+
+  .size{
+
+    font-size:22px;
+  }
